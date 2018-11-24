@@ -26,7 +26,7 @@
 |------|----|-------|
 |name|string|null: false, unique: true|
 
-###Assosiation
+### Assosiation
 - has_many :users
 - has_many :messages
 _ has_many :members
