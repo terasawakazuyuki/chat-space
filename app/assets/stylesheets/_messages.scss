@@ -1,0 +1,169 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*全体*/
+.wrapper {
+  display: flex;
+}
+
+/*左のBOX*/
+.side-bar {
+  box-sizing: border-box;
+  color: #fff;
+  width: 300px;
+}
+
+/*左上*/
+.side-bar .header {
+  background-color: #253141;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+}
+
+.side-bar .header__name {
+  font-size : 16px;
+  font-weight : bold;
+}
+
+/*左下*/
+.groups {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.side-bar .groups .group {
+  padding: 20px 0 40px;
+}
+
+.side-bar .groups .group__name {
+  color: #fff;
+  font-size: 15px;
+}
+
+.side-bar .groups .group__message {
+  color: #fff;
+  font-size: 11px;
+  margin-top : 5px;
+}
+
+/*右*/
+.chat {
+  width: calc(100% - 300px);
+}
+
+.chat .header {
+  box-sizing: border-box;
+  height: 100px;
+  padding: 0 40px;
+  background-color: white;
+  border: 1px solid #eeeeee
+}
+
+.chat .header .left-header {
+  float: left;
+}
+
+.chat .header .left-header__title {
+  color: #333;
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.chat .header .left-header__members {
+  color: #999;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.chat .header .right-header {
+  border: 1px solid #38AEF0;
+  color: #38AEF0;
+  float :right;
+  height : 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 28px;
+}
+
+.chat .header .right-header__button {
+  color: #38AEF0;
+  text-decoration: none;
+}
+
+
+/*チャットメッセージ*/
+.chat .messages {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+
+}
+
+.chat .messages .message {
+margin-bottom: 40px;
+
+}
+
+.chat .messages .upper-message__user-name {
+  color: #434A54;
+  font-size: 16px;
+}
+
+.chat .messages .upper-message__date {
+  color: #999999;
+  font-size: 12px;
+}
+
+.chat .messages .lower-message__content {
+  color: #434A54;
+  font-size: 14px;
+}
+
+
+/*入力フォーム*/
+.chat .form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+}
+
+
+.chat .form__message {
+  border: none;
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  padding: 0 10px;
+  width: calc(100% - 150px);
+}
+
+
+.chat .form__submit {
+  background-color: #38AEF0;
+  border :none;
+  color: #fff;
+  float: right;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 30px;
+}
+
+.chat .form__mast {
+  background-color: #fff;
+  float: left;
+  height: 50px;
+  padding-right: 10px
+}
