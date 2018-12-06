@@ -19,23 +19,38 @@ html, body {
   box-sizing: border-box;
   color: #fff;
   width: 300px;
-}
-
 /*左上*/
-.side-bar .header {
-  background-color: #253141;
-  height: 100px;
-  line-height: 100px;
-  padding: 0 20px;
+  .header {
+    background-color: #253141;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+
+    .header__name {
+      font-size : 16px;
+      font-weight : bold;
+      display: inline-block;
+    }
+    .header__lists {
+      display :inline-block;
+      float:right;
+      display: inline-block;
+
+      .list {
+        display: inline-block;
+      }
+    }
+
+      .icon {
+        color : #fff;
+        text-decoration: none;
+      }
+  }
 }
 
-.side-bar .header__name {
-  font-size : 16px;
-  font-weight : bold;
-}
 
 /*左下*/
-.groups {
+.side-bar .groups {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
@@ -55,6 +70,8 @@ html, body {
   font-size: 11px;
   margin-top : 5px;
 }
+
+
 
 /*右*/
 .chat {
@@ -139,7 +156,6 @@ margin-bottom: 40px;
   padding: 20px 50px 20px 40px;
 }
 
-
 .chat .form__message {
   border: none;
   box-sizing: border-box;
@@ -161,9 +177,18 @@ margin-bottom: 40px;
   padding: 0 30px;
 }
 
-.chat .form__mast {
+.chat .form__mask {
   background-color: #fff;
   float: left;
   height: 50px;
   padding-right: 10px
+}
+
+.chat .form__mask__image {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.chat .form__mask .hidden {
+  display: none;
 }
