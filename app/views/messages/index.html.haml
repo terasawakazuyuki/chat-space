@@ -5,10 +5,10 @@
         UESRNAME
       %ul.header__lists
         %li.list
-          %a{:href => ""}
+          =link_to "#" do
             %i.fa.fa-pencil-square-o.icon
         %li.list
-          %a{:href => ""}
+          =link_to "###" do
             %i.fa.fa-cog.icon
     .groups
       .group
@@ -23,7 +23,7 @@
           tera
         %ul.left-header__members Member:TJ
       .right-header
-        %a.right-header__button{:href => ""} Edit
+        =link_to "Edit", "####", class: "right-header__button"
     / チャット部分本体
     .messages
       .message

@@ -1,13 +1,4 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
 
 /*全体*/
 .wrapper {
@@ -50,27 +41,27 @@ html, body {
 
 
 /*左下*/
-.side-bar .groups {
+  .groups {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
-}
 
-.side-bar .groups .group {
+
+    .group {
   padding: 20px 0 40px;
-}
+    }
 
-.side-bar .groups .group__name {
+    .group__name {
   color: #fff;
   font-size: 15px;
-}
+    }
 
-.side-bar .groups .group__message {
+    .group__message {
   color: #fff;
   font-size: 11px;
   margin-top : 5px;
-}
-
+    }
+  }
 
 
 /*右*/
