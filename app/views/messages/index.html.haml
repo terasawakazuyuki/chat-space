@@ -1,51 +1,43 @@
-!!!
-%html{lang: "ja"}
-  %head
-    %meta{charset: "utf-8"}
-  %title chat-space
-  %body
-    / 左バー
-    .wrapper
-      .side-bar
-        .header
-          %h3.header__name
-            UESRNAME
-          %ul.header__lists
-            %li.list
-              %a{:href => ""}
-                %i.fa.fa-pencil-square-o.icon
-            %li.list
-              %a{:href => ""}
-                %i.fa.fa-cog.icon
-        .groups
-          .group
-            .group__name tera
-            .group__message Hello
-      / チャット部分
-      .chat
-        / チャット部分ヘッダー
-        .header
-          .left-header
-            .left-header__title
-              tera
-            %ul.left-header__members Member:TJ
-          .right-header
-            %a.right-header__button{:href => ""} Edit
-        / チャット部分本体
-        .messages
-          .message
-            .upper-message
-              .upper-message__user-name terasawa
-              .upper-message__date 2018/11/21 23:09
-            .lower-message
-              %p.lower-message__content aaa
-        / メッセージ入力フォーム
-        .form
-          %input.form__message{:placeholder => "type a message"}/
-          .form__mask
-            %label.form__mask__image{:for => "message_image"}
-              %i.fa.fa-picture-o.icon
-              %input#message_image.hidden.js-file{:name => "message[image]", :type => "file"}/
+.wrapper
+  .side-bar
+    .header
+      %h3.header__name
+        UESRNAME
+      %ul.header__lists
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-pencil-square-o.icon
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-cog.icon
+    .groups
+      .group
+        .group__name tera
+        .group__message Hello
+  / チャット部分
+  .chat
+    / チャット部分ヘッダー
+    .header
+      .left-header
+        .left-header__title
+          tera
+        %ul.left-header__members Member:TJ
+      .right-header
+        %a.right-header__button{:href => ""} Edit
+    / チャット部分本体
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name terasawa
+          .upper-message__date 2018/11/21 23:09
+        .lower-message
+          %p.lower-message__content aaa
+    / メッセージ入力フォーム
+    .form
+      %input.form__message{:placeholder => "type a message"}/
+      .form__mask
+        %label.form__mask__image{:for => "message_image"}
+          %i.fa.fa-picture-o.icon
+          %input#message_image.hidden.js-file{:name => "message[image]", :type => "file"}/
 
-          %input.form__submit{"" => "", :name => "commit", :type => "submit", :value => "Send"}/
-
+      %input.form__submit{"" => "", :name => "commit", :type => "submit", :value => "Send"}/
