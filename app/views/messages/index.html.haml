@@ -12,8 +12,12 @@
             = fa_icon 'cog', class: 'icon'
     .groups
       .group
-        .group__name tera
-        .group__message Hello
+        - current_user.groups.each do |group|
+          = link_to group_messages_path(group) do
+            .group__name
+              = group.name
+            .group__message
+              no messages
   / チャット部分
   .chat
     / チャット部分ヘッダー
