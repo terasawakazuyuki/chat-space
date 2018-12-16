@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
       @messages = @group.messages.includes(:user)
-      flash.new[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
   end
@@ -24,6 +24,6 @@ class MessagesController < ApplicationController
   end
 
   def set_group
-    @group = Group.fin(params[:group_id])
+    @group = Group.find(params[:group_id])
   end
 end
