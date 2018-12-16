@@ -23,19 +23,18 @@
     / チャット部分ヘッダー
     .header
       .left-header
-        .left-header__title
-          tera
-        %ul.left-header__members Member:TJ
+        .left-header__title グループ名
+        %ul.left-header__members Member: NO MEMBER
       .right-header
         =link_to "Edit", "####", class: "right-header__button"
     / チャット部分本体
     .messages
       .message
         .upper-message
-          .upper-message__user-name TERASA
-          .upper-message__date 2018/11/21 23:09
+          .upper-message__user-name メンバー名
+          .upper-message__date 投稿時刻
         .lower-message
-          %p.lower-message__content aaa
+          %p.lower-message__content メッセージ
     / メッセージ入力フォーム
     / .form
     /   %input.form__message{:placeholder => "type a message"}/
