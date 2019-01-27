@@ -31,12 +31,14 @@ $(function() {
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false
+      contentType: false,
+      disabled: false
     })
     .done(function(data) {
       var html = buildHTML(data);
-      $('.messages').append(html)
+      $('.messages').append(html);
       $('.form__message').val('');
+      $("#new_message")[0].reset();
     })
     .always(() => {
       $(".form__submit").removeAttr("disabled")
