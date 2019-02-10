@@ -1,6 +1,6 @@
 $(function() {
 
-function appendUser(user) {
+  function appendUser(user) {
     var html = `
                   <div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${user.name}</p>
@@ -8,33 +8,29 @@ function appendUser(user) {
                    </div>
                   `
     return html;
-};
-
-
+  }
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+
 
       $.ajax({
       type: 'GET',
       url: '/users',
       data: { keyword: input },
       dataType: 'json'
-    })
+      })
 
-
-
-     .done(function(users
-      ) {
+     .done(function(users) {
      $(".user-search-result").empty();
      if (users.length !== 0) {
        users.forEach(function(user){
-         appendUser(user);
+         var html = appendUser(user);
+         $(".user-search-result").append(html);
        });
+     } else {
+      appendNoUser("一致するユーザーはありません")
      }
-     else {
-       appendNoUser("一致する映画はありません");
-     }
-   })
-  });
+   });
+ });
 });
