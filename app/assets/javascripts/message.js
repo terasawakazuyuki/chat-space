@@ -33,8 +33,8 @@ $(function() {
       contentType: false,
       disabled: false
     })
-    .done(function(data) {
-      var html = buildSendMessageHTML(data);
+    .done(function(CreateJsonJbuilderdata) {
+      var html = buildSendMessageHTML(CreateJsonJbuilderdata);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.form__message').val('');
@@ -60,8 +60,8 @@ $(function() {
       type: 'GET',
     })
 
-    .done(function(data) {
-      data.messages.forEach(function(message){
+    .done(function(IndexJsonJbuilderdata) {
+      IndexJsonJbuilderdata.messages.forEach(function(message){
         if (message.id > lastId){
           var html = buildSendMessageHTML(message);
           $('.messages').append(html);
