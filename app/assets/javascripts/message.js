@@ -62,10 +62,8 @@ $(function() {
 
     .done(function(data) {
       data.messages.forEach(function(message){
-        console.log(lastId);
         if (message.id > lastId){
           var html = buildHTML(message);
-          console.log(message.id)
           $('.messages').append(html);
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
         };
