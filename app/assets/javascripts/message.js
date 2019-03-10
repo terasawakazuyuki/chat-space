@@ -1,5 +1,5 @@
 $(function() {
-  function buildHTML(message){
+  function buildSendMessageHTML(message){
     var messageImage = message.image?message.image:""
     var html =`<div class="message" data-messageid="${message.id}">
                 <div class="upper-message">
@@ -34,7 +34,7 @@ $(function() {
       disabled: false
     })
     .done(function(data) {
-      var html = buildHTML(data);
+      var html = buildSendMessageHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.form__message').val('');
@@ -63,7 +63,7 @@ $(function() {
     .done(function(data) {
       data.messages.forEach(function(message){
         if (message.id > lastId){
-          var html = buildHTML(message);
+          var html = buildSendMessageHTML(message);
           $('.messages').append(html);
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
         };
