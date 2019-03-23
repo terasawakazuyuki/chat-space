@@ -60,8 +60,8 @@ $(function() {
       type: 'GET',
     })
 
-    .done(function(IndexJsonJbuilderdata) {
-      IndexJsonJbuilderdata.messages.forEach(function(message){
+    .done(function(data) {
+      data.messages.forEach(function(message){
         if (message.id > lastId){
           var html = buildSendMessageHTML(message);
           $('.messages').append(html);
